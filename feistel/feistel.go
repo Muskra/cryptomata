@@ -106,7 +106,7 @@ func nextLn(l []int, r []int, k []int) Parameters {
     ret := Parameters{
         linput: r,
         // it can't be everytime computed, sometimes, l has lower lenght than the rn value thus it's raising an out of bound
-        rinput: intToIntSlice( ( intSliceToInt(r) ^ (newLn & newRn) )),
+        rinput: intToIntSlice( ( intSliceToInt(r) ^ (newLn | newRn) )),
     }
     return ret
 }
